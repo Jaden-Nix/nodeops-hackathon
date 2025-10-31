@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  # This is our main application service
+  depin-fund-template:
+
+    # 1. Build: Tells Docker to use the Dockerfile in this directory
+    build: .
+
+    # 2. Container Name: A simple name for our running app
+    container_name: depin-fund-app
+
+    # 3. Ports: Maps your computer's port 8080 to the app's port 3000
+    # You would then access the app at http://localhost:8080
+    ports:
+      - "8080:3000"
+
+    # 4. Environment Variables: This is where you set your secrets
+    # This is the "Prerequisite" you defined.
+    environment:
+      - PINATA_JWT=PASTE_YOUR_PINATA_JWT_HERE
+      - MASTER_ADMIN_PIN=2004 # You can change your admin PIN here
+
+    # 5. Volumes: 
+    # It links the db.json file inside the container to the db.json
+    # file in your project folder. This makes your database PERSISTENT.
+    # Without this, your database would be erased on every restart.
+    volumes:
+      - ./db.json:/usr/src/app/db.json

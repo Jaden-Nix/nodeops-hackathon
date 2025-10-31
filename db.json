@@ -1,16 +1,3 @@
 {
-  "projects": [
-    {
-      "id": "d64f13f1-c553-47aa-bce3-73de8eef4ad2",
-      "name": "Awesome project",
-      "description": "Use case",
-      "githubLink": "https://github.com/Jaden-Nix",
-      "metadataUrl": "https://gateway.pinata.cloud/ipfs/QmPpg5sV5yioZKHiHE3akFqpe4BbbKqyL8v6V8JVDR22wT",
-      "fundingGoal": 100,
-      "isNonProfit": true,
-      "pledges": 7,
-      "status": "funding",
-      "createdAt": 1761660535371
-    }
-  ]
+  "projects": []
 }
